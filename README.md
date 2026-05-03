@@ -24,7 +24,16 @@ Where is the organization bleeding money, and what drives the highest costs?
 
 ## Figures
 
-*(charts here)*
+![Claim Type by Paid and Billed Amounts](images/Claim%20Type%20by%20Paid%20and%20Billed%20Amounts.jpeg)
+
+![Ratio by Claim Type](images/Ratio%20by%20Claim%20Type.jpeg)
+
+![Top 10 CPT Codes by Paid Amount](images/Top%2010%20CPT%20Codes%20by%20Paid%20Amount.jpeg)
+
+![Top 10 ICD Codes by Paid Amount](images/Top%2010%20ICD%20Codes%20by%20Paid%20Amount.jpeg)
+
+![Top 10 Member Level Claims by Claim Type](images/Top%2010%20Member%20Level%20Claims%20by%20Claim%20Type.jpeg)
+
 
 ## Discussion
 
