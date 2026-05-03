@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project analyzes healthcare claims data to identify where costs are concentrated and where the organization is losing money. The analysis examines spending by claim type, procedure codes, diagnosis codes, and member-level costs to surface actionable insights for executives.
+This project analyzes healthcare claims data to identify where costs are concentrated and where the organization is losing money. The analysis examines spending by claim type, procedure codes, diagnosis codes, and member-level costs.
 
 This project demonstrates skills in SQL (data querying, aggregation, filtering), R (ggplot2, dplyr), and healthcare data analysis.
 
