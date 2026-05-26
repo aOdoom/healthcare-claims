@@ -14,15 +14,12 @@ pacman::p_load(
   skimr
 )
 
-# set root directory and make into object
-root_dir <- "data"
-
 # import 
-claim_breakdown <- rio::import(here::here(root_dir, "claim type cost breakdown.csv"))
-highest_cost_members <- rio::import(here::here(root_dir, "highest cost members by claim type.csv"))
-icd <- rio::import(here::here(root_dir, "top 10 icd codes by total paid.csv"))
-cpt <- rio::import(here::here(root_dir, "top 10 cpt codes by total paid amount.csv"))
-ratio <- rio::import(here::here(root_dir, "ratio by claim type.csv"))
+claim_breakdown <- read_csv("claim type cost breakdown.csv")
+highest_cost_members <- read_csv("highest cost members by claim type.csv")
+icd <- read_csv("top 10 icd codes by total paid.csv"))
+cpt <- read_csv("top 10 cpt codes by total paid amount.csv")
+ratio <- read_csv("ratio by claim type.csv")
 
 # reformat data
 data_long <- claim_breakdown %>%
