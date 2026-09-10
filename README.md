@@ -57,7 +57,7 @@ The member page focuses on individual-level spending and reimbursement:
   - Spending is concentrated among a small number of members, who are strong candidates for targeted case management to improve outcomes and control costs.
 
 ## Notes
-This project uses a small practice dataset (approximately 447 claims) and is intended as a demonstration of SQL data preparation and Power BI dashboard development rather than a substantive clinical or financial analysis. The patterns shown illustrate dashboard functionality and metric design, not generalizable healthcare findings.
+This project uses a small practice dataset of 447 claims and is intended as a demonstration of SQL data preparation and Power BI dashboard development rather than a substantive clinical or financial analysis. The patterns shown illustrate dashboard functionality and metric design, not generalizable healthcare findings.
 
 ## Tools Used
 SQL, Power BI
