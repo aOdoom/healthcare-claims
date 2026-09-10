@@ -29,7 +29,8 @@ The member page focuses on individual-level spending and reimbursement:
 - **Lowest paid/billed ratios by CPT and ICD code** — procedures and diagnoses with the smallest reimbursement share
 
 ## Key Findings
-- Inpatient claims accounted for the majority of spending (about 70%), with a paid/billed ratio of 75.2%.
+- Inpatient claims accounted for the majority of spending (about 70%),
+- The overall paid/billed ratio is 75.2%.
 - The highest-spending member (Member 6) accounted for approximately $43,000 in total paid claims.
 - CPT code 67890 accounted for about $243,000 in spending, and ICD code I10 accounted for about $259,000, making them the top procedure and diagnosis cost drivers.
 - Claims were concentrated in 2023 (323 claims), followed by 2024 (123) and 2022 (1).
