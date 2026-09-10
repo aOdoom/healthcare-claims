@@ -20,16 +20,14 @@ FROM claims;
 SELECT DISTINCT claim_type AS distinct_claims
 FROM claims;
 
---find total billed/paid amount by claim type and number of claims per claim type
-CREATE VIEW claims_summary AS
-SELECT SUM(billed_amount) AS total_billed_amt, SUM(paid_amount) AS total_pd_amt, COUNT(claim_id) as total_claims, claim_type
+--find overall percent of total paid by claim type
+SELECT claim_type, SUM(paid_amount) as total_paid, SUM(billed_amount) as total_billed, COUNT(claim_id) as total_claims,
+	ROUND(SUM(paid_amount) * 100.0 / SUM(SUM(paid_amount)) OVER (),
+	2)
+		AS pct_of_total_paid
 FROM claims
-GROUP BY claim_type;
-
---use claims_summary to order by most expensive paid amount
-SELECT claim_type, total_claims,  total_pd_amt, total_billed_amt
-FROM claims_summary
-ORDER BY total_pd_amt DESC;
+GROUP BY claim_type
+ORDER BY pct_of_total_paid DESC;
 
 -------------------CPT/ICD Cost Drivers--------------------
 --find top 10 CPT codes by total paid amount
