@@ -1,45 +1,49 @@
-# Healthcare Claims Cost Analysis
+# Healthcare Claims Analysis
 
 ## Overview
-
-This project analyzes healthcare claims data from Analyst Builder (https://www.analystbuilder.com/projects/healthcare-claims-where-is-the-money-going-TVHLQ?tab=overview) to identify where costs are concentrated and where the organization is losing money. The analysis examines spending by claim type, procedure codes, diagnosis codes, and member-level costs.
-
-This project demonstrates skills in SQL (data querying, aggregation, filtering), R (ggplot2, dplyr), and healthcare data analysis.
-
-## Business Question
-
-Which claim types are the most expensive?
-
-Which CPT and ICD codes drive the highest spending?
-
-Which members account for the largest share of total costs?
-
-How do billed amounts compare to paid amounts?
+This project analyzes healthcare claims data to identify spending patterns across claim types, procedures, diagnoses, and members. Data was prepared and queried in SQL, and an interactive dashboard was built in Power BI to visualize cost drivers and reimbursement patterns.
 
 ## Data
+The dataset contains healthcare claims records with fields for claim type, billed and paid amounts, CPT procedure codes, ICD diagnosis codes, member identifiers, member age, and service year. Data is from an Analyst Builder practice project.
 
-* `claims` — 447 claims across 100 members (2 claims removed during data cleaning)
+## Dashboard
 
+### Claims Overview
+
+![Claims Overview](images/claims_overview.png)
+
+The overview page summarizes spending across the claims portfolio:
+- **Total billed and paid by claim type** — comparing charges against reimbursement
+- **Total claims by year**
+- **Total paid by ICD and CPT code** — identifying the highest-cost diagnoses and procedures
+- **Average paid per claim by CPT**
+
+### Member Analysis
+
+![Member Analysis](images/member_analysis.png)
+
+The member page focuses on individual-level spending and reimbursement:
+- **Top 10 members by total paid**
+- **Paid/billed ratio by claim type** — the share of billed charges actually reimbursed
+- **Member distribution by age category**
+- **Lowest paid/billed ratios by CPT and ICD code** — procedures and diagnoses with the smallest reimbursement share
 
 ## Key Findings
+- Inpatient claims accounted for the majority of spending (about 70%), with a paid/billed ratio of 75.2%.
+- The highest-spending member (Member 6) accounted for approximately $43,000 in total paid claims.
+- CPT code 67890 accounted for about $243,000 in spending, and ICD code I10 accounted for about $259,000, making them the top procedure and diagnosis cost drivers.
+- Claims were concentrated in 2023 (323 claims), followed by 2024 (123) and 2022 (1).
 
-* **Inpatient claims** account for $1.09M (70% of total paid)
-* **Top CPT code** (67890) alone accounts for $204K in spending
-* **Top 10 members** account for disproportionate spending, with Member 6 and Member 32 each exceeding $40K
-* **Payment ratio** is lowest for inpatient (74%) and highest for lab (91%)
-* **Total billed**: $2,061,985 | Total paid: $1,550,565 (75% payment ratio)
+## Recommendations
+- **Prioritize inpatient claims for cost management**
+  - Inpatient accounts for roughly 70% of total spending, making it high priority item to review utilization and care management.
+- **Investigate procedures and diagnoses with low paid/billed ratios**
+  - Codes with the smallest reimbursement share may indicate claim denials, coding errors, or underpayment, which warrant review.
+- **Target high-cost members for case management**
+  - Spending is concentrated among a small number of members, who are strong candidates for targeted case management to improve outcomes and control costs.
 
-## Figures
-<img src="images/Claim Type by Paid and Billed Amounts.jpeg" width="800" height="800">
-<img src="images/Ratio by Claim Type.jpeg" width="800" height="800">
-<img src="images/Top 10 ICD Codes by Paid Amount.jpeg" width="800" height="800">
-<img src="images/Top 10 CPT Codes by Paid Amount.jpeg" width="800" height="800">
-<img src="images/Top 10 Member Level Claims by Claim Type.jpeg" width="800" height="800">
-
-## Discussion
-
-The concentration of spending in a small number of high-cost members indicates an area for change. Inpatient claims dominate spending at 70% of total paid amounts. Identifying ICD and CPT codes with high spending can help decrease total inpatient paid amounts.
+## Notes
+This project uses a small practice dataset (approximately 447 claims) and is intended as a demonstration of SQL data preparation and Power BI dashboard development rather than a substantive clinical or financial analysis. The patterns shown illustrate dashboard functionality and metric design, not generalizable healthcare findings.
 
 ## Tools Used
-
-SQL (SQLite), R (ggplot2)
+SQL, Power BI
