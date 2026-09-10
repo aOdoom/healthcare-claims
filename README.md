@@ -18,6 +18,19 @@ The overview page summarizes spending across the claims portfolio:
 - **Total paid by ICD and CPT code** — identifying the highest-cost diagnoses and procedures
 - **Average paid per claim by CPT**
 
+**Paid Amount by Claim Type**
+
+| Claim Type | Total Billed | Total Paid | Total Claims | % of Total Paid |
+|------------|-------------:|-----------:|-------------:|----------------:|
+| Inpatient  | $1,478,601   | $1,092,456 | 99           | 70.5%           |
+| Emergency  | $384,242     | $294,441   | 88           | 19.0%           |
+| Outpatient | $160,718     | $129,053   | 105          | 8.3%            |
+| Lab        | $25,790      | $23,412    | 76           | 1.5%            |
+| Pharmacy   | $12,635      | $11,202    | 79           | 0.7%            |
+
+
+
+
 ### Member Analysis
 
 ![Member Analysis](images/member_analysis.png)
