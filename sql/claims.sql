@@ -85,11 +85,11 @@ ORDER BY total_pd_amt DESC LIMIT 10;
 SELECT member_id, claim_type, SUM(paid_amount) AS total_pd_amt
 FROM claims
 WHERE member_id IN (SELECT member_id FROM highest_paying_members)
-GROUP BY member_id, claim_type
-ORDER BY member_id DESC; 
+GROUP BY member_id
+ORDER BY member_id DESC
+LIMIT 10;
 
 ---------Billed vs Paid Ratio-----------------
-
 ---find ratio for each claim type 
 SELECT claim_type, SUM(paid_amount) as paid, SUM(billed_amount) as bill, (SUM(paid_amount)/SUM(billed_amount)) AS ratio
 FROM claims
